@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行列計算アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>行列計算アプリ</h1>
+            <p>この行列計算ソフトでできることは、以下の通りです:</p>
+            <ul>
+                <li>行列の足し算 (+)</li>
+                <li>行列の引き算 (-)</li>
+                <li>行列の掛け算 (*)</li>
+                <li>スカラー倍 (s)</li>
+                <li>累乗 (^)</li>
+                <li>rankの導出 (r)</li>
+                <li>行列式の導出 (d)</li>
+                <li>転置行列の導出 (t)</li>
+                <li>逆行列の導出 (i)</li>
+            </ul>
+            <p>まず最初に、何をしたいかを選択してください。</p>
+            <div id="operation-buttons">
+                <button onclick="setOperation('+')">+</button>
+                <button onclick="setOperation('-')">-</button>
+                <button onclick="setOperation('*')">*</button>
+                <button onclick="setOperation('s')">s</button>
+                <button onclick="setOperation('^')">^</button>
+                <button onclick="setOperation('r')">r</button>
+                <button onclick="setOperation('d')">d</button>
+                <button onclick="setOperation('t')">t</button>
+                <button onclick="setOperation('i')">i</button>
+            </div>
+            <div id="input-fields" class="input-container">
+                <!-- 動的に入力フィールドが追加されます -->
+            </div>
+            <button onclick="startCalculation()">計算開始</button>
+            <h2>結果:</h2>
+            <div id="result-container">
+                <pre id="result"></pre>
+                <div id="result-note" class="hidden">注意: この計算は履歴に保存されています。</div>
+            </div>
+            <button onclick="toggleHistory()">履歴</button>
+            <div id="history" class="hidden">
+                <!-- 履歴がここに表示されます -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
